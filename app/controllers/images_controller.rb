@@ -15,8 +15,7 @@ class ImagesController < ApplicationController
   def create
     # Manipula los parametros que se reciben
     #render plain: params[:image].inspect
-
-
+    
     @image = Image.new image_params
     if @image.save
       redirect_to images_path
